@@ -38,7 +38,7 @@ for i in range (number):
     enemyImg.append(pygame.image.load('toilet.png'))
     enemyX.append(random.randint(20,715))
     enemyY.append(random.randint(360,480))
-    enemyX_change.append(random.choice([4.5,-4.5]))
+    enemyX_change.append(random.choice([2,-2]))
     enemyY_change.append(40)
 
 #Poop-bullet
@@ -46,7 +46,7 @@ bulletImg=pygame.image.load('poop.png')
 bulletX=0
 bulletY=60
 bulletX_change=0 #Bullet's not going to move in the x-direction
-bulletY_change=10
+bulletY_change=4.5
 bullet_state="ready"
 
 def player(x,y):
@@ -99,9 +99,9 @@ while running:
         #To check if any key stroke is done:
         elif event.type==pygame.KEYDOWN:
             if event.key==pygame.K_LEFT:      #This part is to 
-                playerX_change=-7            #move the butt           
+                playerX_change=-4             #move the butt           
             elif event.key==pygame.K_RIGHT:   #left or right
-                playerX_change=7
+                playerX_change=4
             #To shoot bullet:
             elif event.key==pygame.K_SPACE:
                 if bullet_state=="ready":
