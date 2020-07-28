@@ -10,12 +10,12 @@ pygame.init()
 screen=pygame.display.set_mode((800,600))
 
 #Speeds depend on the device you're using, alter them using this:
-speed_enemy=4
-speed_player=6
-speed_bullet=7
+speed_enemy=1.5
+speed_player=2
+speed_bullet=3.5
 
 #Background
-background=pygame.image.load("bg2.png")
+background=pygame.image.load("bg2.png").convert()
 
 #Background music
 mixer.music.load('Game bg music.wav')
